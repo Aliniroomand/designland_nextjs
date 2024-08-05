@@ -2,32 +2,139 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* animations _______ */
+  
+          @keyframes wobble {
+      0% {
+          transform:translate(0);
+              }
+              20% {
+                  transform:translate(5px,-5px);
+              }
+              40% {
+                  transform:translate(5px,5px);
+              }
+              60% {
+                  transform:translate(-5px,5px);
+              }
+              80% {
+                  transform:translate(-5px,-5px);
+              }
+              100% {
+                  transform:translate(0);
+              }}
+              .wobble {
+              animation: wobble 4s ease-in-out infinite ;
+          }
+          .wobble_with_delay{
+              animation: wobble 6s ease-in-out infinite forwards;
+              animation-delay: 0.5s;
+          }
+          @keyframes slide-in-bottom {
+        
+              0% {
+                  transform:translateY(-100vh)rotate(0deg);
+              }
+              100% {
+                  transform:translateY(100vh)rotate(360deg);
+              }
+          }
+          .floated_up_down{
+          animation: slide-in-bottom 8s linear 0s infinite normal forwards;
+              }
+          .floated_down_up{
+          animation: slide-in-bottom 8s linear 0s infinite reverse forwards;
+              }
+          .floated_down_up_delay{
+          animation: slide-in-bottom 8s linear 1.5s infinite reverse forwards;
+              }
+  
+          @keyframes vibrate {
+        
+      0% {
+        transform:translate(0);
+      }
+      10% {
+        transform:translate(-3px,-3px);
+      }
+      20% {
+        transform:translate(2px,-2px);
+      }
+      30% {
+        transform:translate(-2px,2px);
+      }
+      40% {
+        transform:translate(2px,2px);
+      }
+      50% {
+        transform:translate(-2px,-2px);
+      }
+      60% {
+        transform:translate(2px,-2px);
+      }
+      70% {
+        transform:translate(-2px,2px);
+      }
+      80% {
+        transform:translate(-2px,-2px);
+      }
+      90% {
+        transform:translate(2px,-2px);
+      }
+      100% {
+        transform:translate(0);
+      }
+    }
+  /* ________animations _______ */
+  
+  
+  /* Custom classes */
+          .Nav_menu{
+              position: fixed ;
+              display:flex;
+              flex-direction: column;
+               justify-content: end;
+              width:100%;
+              height: 100%;
+              padding:5% 0 5% 0 ;
+             bottom: 0;
+               z-index:100;
+               background: linear-gradient(90deg, rgba(168, 177, 235, 0) 0%, rgba(249, 127, 188, 0.097) 20%, rgba(249, 127, 188, 0.268) 50%);
+          }
+          .deactived_menu{
+              transform:translateX(100%);
+              visibility:hidden;
+              transition: transform 0.5s ,visibility 0.5s;
+          }
+          .actived_menu{
+              transform:translateX(0);
+              visibility:visible;
+              transition: transform 0s ,visibility 0.5s;
+          }
+          .nav_childs_container{
+              position: relative;
+              display:flex;
+              align-items: center;
+              justify-content: start;
+              height: 20%;
+              animation: wobble 6s ease-in-out infinite forwards;
+              animation-delay: 1s;
+              cursor:pointer;
+          }
+          .text_shadow{
+              text-shadow: 1px 1px 1px #000000a7, 3px -3px 3px #ffffff54 ;
+          }
+          .images_shadow{
+              filter: drop-shadow(-5px 5px 3px #2b2b2b)drop-shadow(0px -2px 7px #ffffff96);
+          }
+          .hover_animation:hover,
+          .hover_animation:active{
+              animation: vibrate 0.5s linear 0s infinite normal forwards;
+          }
+  
+  /*______ Custom classes________ */
+          
+  
   }
-}
