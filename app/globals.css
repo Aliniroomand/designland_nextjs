@@ -35,8 +35,8 @@ transform:translate(0);
 @keyframes slide-in-top {
 
   0% {
-    transform:translateY(-100%);
-    opacity:0;
+    transform:translateY(-300%);
+    opacity:1;
   }
   100% {
     transform:translateY(0);
@@ -44,7 +44,7 @@ transform:translate(0);
   }
 }
 .slideIn_top_animation{
-  animation: slide-in-top 0.3s linear 0s 1 normal forwards;
+  animation: slide-in-top 0.3s linear 0s 1 normal both;
 }
 @keyframes slide-out-top {
   
@@ -53,15 +53,26 @@ transform:translate(0);
     opacity:1;
   }
   100% {
-    transform:translateY(-10px);
-    opacity:0;
+    transform:translateY(-300%);
+    opacity:1;
   }
 }
 .slideOut_top_animation{
-  animation: slide-out-top 0.5s linear 0s 1 normal forwards;
+  animation: slide-out-top 0.5s linear 0s 1 normal both;
 }
-
-
+@keyframes text-focus-in {
+			
+  0% {
+    filter:blur(12px);
+    opacity:0;
+  }
+  100% {
+    filter:blur(0);
+    opacity:1;
+  }}
+.text_animation{
+  animation: text-focus-in 1.8s linear 0s 1 normal backwards;
+}
   /* ________animations _______ */
   
   

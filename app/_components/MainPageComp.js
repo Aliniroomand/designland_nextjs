@@ -28,7 +28,7 @@ return(
         />
 
         {/* Title Part */}
-            <p className='fixed z-10 h-[13svh] sm:h-[15svh] top-0 sm:text-xl text-xl text-center bg-white backdrop-blur-[1px] bg-opacity-55 text-slate-900 w-full font-semibold sm:py-2 py-6 ' style={{ textShadow: '0px 0px 5px #fff' }}>
+            <p className='fixed z-10 h-[13svh] sm:h-[15svh] top-0 sm:text-xl text-xl text-center bg-white backdrop-blur-[1px] bg-opacity-55 text-slate-900 w-full font-semibold sm:py-2 py-6 text_animation' style={{ textShadow: '0px 0px 5px #fff' }}>
                 به دنیای رنگی دیزاین لند خوش اومدی <br />برای دیدن قسمتهای مختلف هنر ما اسکرول کن
             </p>
 
@@ -38,7 +38,7 @@ return(
                 href="balloon"
                 className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={balloon}/>
-                    <p className='absolute self-center text-4xl font-bold sm:text-xl bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center'>
+                    <p className='absolute self-center text-4xl font-bold sm:text-xl bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center text_animation'>
                     هنرهای با بادکنک
                     </p>
             </Link>
@@ -46,7 +46,7 @@ return(
                 href="flower"
                 className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={flower}/>
-                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl'>
+                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation'>
                     هنرهای با گل
                     </p>
             </Link>
@@ -54,7 +54,7 @@ return(
                 href="fruit"
                 className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={fruit}/>
-                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl'>
+                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation'>
                     هنرهای با میوه
                     </p>
             </Link>
@@ -62,7 +62,7 @@ return(
                 href="about"
                 className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={contactUs}/>
-                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl'>
+                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation'>
                     درباره ما <br></br> وارتباط با ما
                     </p>
             </Link>
@@ -70,7 +70,7 @@ return(
                 href="learning"
                 className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={learning}/>
-                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl'>
+                    <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation'>
                     آموزش و یادگیری
                     </p>
             </Link>

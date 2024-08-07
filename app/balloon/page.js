@@ -32,7 +32,7 @@ console.log(selectedOption);
                     </section>
                 </article>
                 <section 
-                        className={`${selectedOption.design_with_balloon || selectedOption.arg_design ||selectedOption.events_design ? "slideIn_top_animation" : "slideOut_top_animation"}  bg-white bg-opacity-70 h-fit text-xl text-center w-full py-1 `}>
+                        className={`${selectedOption.design_with_balloon || selectedOption.arg_design ||selectedOption.events_design ? "slideIn_top_animation" :"hidden"}  bg-white bg-opacity-70 h-fit text-xl text-center  w-full  py-1 `}>
                     <button className={`pink_button !text-md !bg-darkPink2 !text-white  w-1/2 ${selectedOption.arg_design&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({arg_design:true,design_with_balloon:true,})}>
                     آرگ و افتتاحیه
                     </button>
