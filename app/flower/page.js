@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
-// image
+// image 
 import BG from "@/src/assets/images/flower designs/BG.png"
-import titleBG from "@/src/assets/images/flower designs/titleBG.png"
+
 
 
 export default function FlowerDesignPage (){
@@ -30,7 +30,7 @@ export default function FlowerDesignPage (){
                 <h1 className="text-xl text-center py-3 bg-white bg-opacity-55 h-1/2">
                     کدوم سبک گل آرایی مدنظرتون هست؟
                 </h1>
-                <ul id="container_of_categories" className="relative flex items-center gap-3 text-nowrap mx-10 h-1/2 overflow-x-scroll bg-white bg-opacity-25 "> 
+                <ul id="container_of_categories" className="relative flex items-center gap-3 text-nowrap mx-10 h-1/2 overflow-x-scroll bg-white bg-opacity-25 border-violet-300 border"> 
                     <button onClick={scrollRight} className="fixed right-0 h-[6svh] text-4xl font-extrabold">→</button>
                     <li className=" border-l px-2 border-violet-700 pl-4 text-lg text-violet-950">همه</li>
                     <li className=" border-l px-2 border-violet-700 pl-4 text-lg text-violet-950">جشن ها</li>

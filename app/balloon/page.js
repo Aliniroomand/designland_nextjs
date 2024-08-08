@@ -16,7 +16,7 @@ export default function BalloonDesignPage (){
         
     })
 
-console.log(selectedOption);
+console.log({selectedOption});
     return (
         <main className=" relative md:w-[50svw] mx-auto ">
             <Image src={BG} quality={50} placeholder="blur" className=" blur-[3px] object-cover h-screen fixed z-[-1] top-0 right-0"/>
@@ -32,11 +32,11 @@ console.log(selectedOption);
                     </section>
                 </article>
                 <section 
-                        className={`${selectedOption.design_with_balloon || selectedOption.arg_design ||selectedOption.events_design ? "slideIn_top_animation" :"hidden"}  bg-white bg-opacity-70 h-fit text-xl text-center  w-full  py-1 `}>
-                    <button className={`pink_button !text-md !bg-darkPink2 !text-white  w-1/2 ${selectedOption.arg_design&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({arg_design:true,design_with_balloon:true,})}>
+                        className={`${selectedOption.design_with_balloon || selectedOption.arg_design ||selectedOption.events_design ? "slide-in" :"slide-out"}  bg-white bg-opacity-70 h-fit text-xl text-center  w-full  py-1 `}>
+                    <button className={`pink_button !text-md !bg-darkPink2 !text-white  w-1/2 ${selectedOption.arg_design && " brightness-150"} `} onClick={()=>setSelectedOption({arg_design:true,design_with_balloon:true})}>
                     آرگ و افتتاحیه
                     </button>
-                    <button className={`pink_button  !text-md !bg-darkPink2 !text-white w-1/2 ${selectedOption.events_design && "!text-[#f97fbcf0] !bg-black" } `} onClick={()=>setSelectedOption({events_design:true,design_with_balloon:true})}>
+                    <button className={`pink_button  !text-md !bg-darkPink2 !text-white w-1/2 ${selectedOption.events_design && "brightness-150" } `} onClick={()=>setSelectedOption({events_design:true,design_with_balloon:true})}>
                     مناسبتی
                     </button>
                 </section>
