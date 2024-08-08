@@ -27,8 +27,8 @@ console.log({selectedOption});
                     </h1>
 
                     <section className="flex flex-row items-center justify-evenly mt-3 ">
-                        <button className={`pink_button ${selectedOption.buckets&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({buckets:true})}>بوکت های بادکنکی </button>
-                        <button className={`pink_button ${selectedOption.design_with_balloon&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({design_with_balloon:true})}>دیزاین با بادکنک</button>
+                        <button className={`pink_button bg-darkPink2 ${selectedOption.buckets&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({buckets:true})}>بوکت های بادکنکی </button>
+                        <button className={`pink_button bg-darkPink2 ${selectedOption.design_with_balloon&& "!text-[#f97fbcf0] !bg-black"} `} onClick={()=>setSelectedOption({design_with_balloon:true})}>دیزاین با بادکنک</button>
                     </section>
                 </article>
                 <section 
