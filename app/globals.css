@@ -5,6 +5,10 @@
 
 @layer utilities {
 /* root */
+html{
+  scroll-behavior:smooth;
+
+}
 ::-webkit-scrollbar {
   width: 12px;
   border-radius: 100px;
@@ -160,7 +164,12 @@ transform:translate(0);
 }
 
 
-
+.maskForImages{
+  mask-border-source: url('/src/assets/images/Root/images_mask.png');
+  mask-size:contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
   /*______ Custom classes________ */
           
   

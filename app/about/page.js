@@ -31,10 +31,10 @@ export default function AboutUsPage (){
                     </p>
                     <Image
                         src={us}
-                        className="absolute  bottom-0 w-full h-full z-10"
-                    
+                        className="absolute  bottom-0 w-full h-full z-10 maskForImages"
                     />
             </article>
+
             <article>
                 <h1>دوره های رسمی</h1>
                 <section>
