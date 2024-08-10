@@ -14,13 +14,13 @@ export default function Navbar() {
  
   return (
     <article>
-        <section className="fixed grid place-items-center w-24 h-24 left-0 bottom-0 cursor-pointer" onClick={()=>setOpenMenu(e=>!e)}>
+        <section className="fixed grid place-items-center w-24 h-24 left-0 bottom-0 cursor-pointer " onClick={()=>setOpenMenu(e=>!e)}>
             <h1 className="z-[55] text-white text-2xl "  >
                 منو
             </h1>
             <Image className="absolute inset-auto object-cover opacity-90" src={BG} alt="BG" />
         </section>
-        <section className={` fixed ${openMenu?"slide-in":" slide-out !translate-y-[-100%]"} w-svw h-[50svh] right-0 top-0 bg-gradient-to-l from-[#fff] to-[#ffffff2d]  backdrop-blur-sm text-2xl  flex flex-col justify-between pt-4 pb-9 rounded-bl-full sm:w-[30svw] sm:h-svh sm:text-lg `}>
+        <section className={` fixed ${openMenu?"slide-in":" slide-out !translate-y-[-100%]"} w-svw h-[50svh] right-0 top-0 bg-gradient-to-l from-[#fff] to-[#ffffff2d]  backdrop-blur-sm text-2xl  flex flex-col justify-between pt-4 pb-9 rounded-bl-full sm:w-[30svw] sm:h-svh sm:text-lg  `}>
             <ul >
                 <li>
                     <Link href="/" className="text-pink-500 text_shadow">
@@ -30,7 +30,7 @@ export default function Navbar() {
                 <li className="cursor-pointer text-pink-700 text_shadow" onClick={()=>setOpendesigns(e=>!e)}>
                 📷 دیزاین ها<span className="px-3 text-3xl sm:text-base text_shadow">{opendesigns ?"↑" :"↓" }</span>
                 </li>
-                <ul className={`${opendesigns?"slide-in":" slide-out hidden"} flex flex-col justify-center items-start mx-6 py-1 text-center  w-1/2 right-[25%] bg-opacity-35 divide-y-[0.5px] border-y-[0.1px] border-gray-400 divide-gray-400`}>
+                <ul className={`${opendesigns?"slide-in":" slide-out hidden"} flex flex-col justify-center items-start mx-6 py-1 text-center  w-1/2 right-[25%] bg-opacity-35 divide-r-[0.5px] border-r-[0.1px] border-gray-400 divide-gray-400`}>
                     <li>
                         <Link href="balloon" className="text-amber-600 py-1  ">🎈بادکنک آرایی</Link>
                     </li>

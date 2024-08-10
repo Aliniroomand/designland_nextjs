@@ -4,6 +4,35 @@
 
 
 @layer utilities {
+/* root */
+::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #f77878, #f9d38d, #f6f696, #93f7c5, #95e0f9, #c590fa, #d594f6)
+  ;
+  border-radius: 6px ;
+  border: 1px solid #00000066;
+  opacity: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00000089, #ffffff8a);
+  border-radius: 6px;
+  border: solid 0.5px ;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background: #00000044;
+ cursor: pointer;
+}
+/*_____root */
+
+
+
+
   /* animations _______ */
   
 @keyframes wobble {
@@ -44,7 +73,7 @@ transform:translate(0);
     opacity:1;
   }}
 .text_animation{
-  animation: text-focus-in 1.8s linear 0s 1 normal backwards;
+  animation: text-focus-in 0.5s linear 0s 1 normal backwards;
 }
   /* ________animations _______ */
   /* Custom classes */
