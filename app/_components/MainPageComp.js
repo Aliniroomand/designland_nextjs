@@ -44,7 +44,7 @@ return(
             </Link>
             <Link 
                 href="flower"
-                className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
+                className="relative z-30 w-full h-[50svh] wobble_with_delay grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={flower} alt="flower designs"/>
                     <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation' >
                     هنرهای با گل
@@ -60,7 +60,7 @@ return(
             </Link>
             <Link 
                 href="about"
-                className="relative z-30 w-full h-[50svh] wobble grid place-items-center " >
+                className="relative z-30 w-full h-[50svh] wobble_with_delay grid place-items-center " >
                     <Image className=' drop-shadow-4xl' src={contactUs} alt="contact us"/>
                     <p className='absolute self-center text-4xl font-bold bg-slate-100 bg-opacity-50 px-7 rounded-2xl text-center sm:text-xl text_animation' >
                     درباره ما <br></br> وارتباط با ما

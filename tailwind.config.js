@@ -23,6 +23,10 @@ module.exports = {
       "8xl":"0 0 1px #000",
       "text":"1px -1px 3px #fff",
     },
+    boxShadow:{
+      "bottom_left":"-3px 3px 3px #00000077 "
+
+    }
     
   },
   plugins: [],

@@ -41,58 +41,61 @@ export default function AboutUsPage() {
   return (
     <>
       <Image
-        className="fixed h-full z-[-1] w-screen right-0 bottom-0 object-cover object-right"
+        className="fixed h-full z-[-1] w-[200vw] right-0 bottom-0 object-cover  blur-[2.5px] object-right"
         src={BG}
         placeholder="blur"
         quality={80}
         alt="BG"
       />
-      <main className="flex flex-col items-center justify-start text-pink-800 py-4">
-        <h1 className="w-[90%] right-[5%] h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl border-t-2  border-r-2 images_shadow">
+      <main className="flex flex-col items-center justify-start text-pink-800 py-4 ">
+        <h1 className="w-[90svw] right-[5%] h-[10svh] grid place-items-center bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl sm:text-2xl font-semibold p-1 rounded-t-3xl border-t-2 border-r-2  text_shadow shadow-xl sm:rounded-full">
           داستان ما
         </h1>
-        <article ref={ref2} className={`relative w-svw h-[50svh] top-0 flex flex-col gap-[5%] mx-[5%] ${inView2 ? "fade_in_animation" :"fade-out-animation " }`}>
-          <p className="absolute bottom-0 w-[90%] right-[5%] break-words overflow-y-scroll z-20 h-1/3  bg-gradient-to-b from-[#ffffff00] via-[#ffffff] via-[#ffffff]  to-white  bg-opacity-90 rounded-b-3xl  p-1 text-center text_shadow  ">
+        <article ref={ref2} className={`relative w-[90svw] h-[60svh] lg:h-[90svh] top-0 lg:top-5 flex flex-col lg:flex-row gap-[5%] mx-[5%] ${inView2 ? "fade_in_animation" :"fade-out-animation" } rounded-3xl`}>
+          <p className="absolute bottom-0 w-full lg:w-1/3 lg:right-[10%] lg:h-fit lg:top-1/4 break-words overflow-y-scroll z-20 h-1/3  break-all text-wrap  bg-gradient-to-b lg:bg-none lg:overflow-hidden from-[#ffffff00] via-[#ffffff] via-[#ffffff]  to-white  bg-opacity-90 rounded-b-3xl lg:rounded-3xl lg:p-5  p-1 text-center text_shadow lg:neo_shadow ">
             aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa   
 
           </p>
           <Image
             src={us}
-            className="absolute bottom-0 w-[90%] right-[5%] h-full z-10 rounded-b-3xl  border-r-2 images_shadow"
+            className="absolute bottom-0 w-full lg:w-1/3 h-full aspect-square z-10 rounded-b-3xl  border-r-2 images_shadow neo_shadow lg:left-[15%] lg:rounded-full  "
             alt="about us image"
-          />
+            />
         </article>
 
-        <article ref={ref1} className={`mt-10 mb-5 ${inView1 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw` }>
-          <h1 className="w-full h-[6svh]  bg-gradient-to-b from-pink-300 via-pink-300 to-[#ffffff00] bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-3xl mb-3">
+        <article ref={ref1} className={`mt-10 mb-5 ${inView1 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl  w-[90svw] right-[5svw] neo_shadow sm:flex sm:items-center sm:justify-start sm:bg-pink-200 sm:bg-opacity-60` }>
+          <h1 className="w-full h-[6svh] sm:h-full sm:bg-none bg-gradient-to-b from-pink-300 via-pink-300 to-[#ffffff00] bg-opacity-70  text-pink-800 text-center text-3xl sm:text-xl font-semibold p-1 text_shadow rounded-3xl mb-3 ">
             دوره های رسمی
           </h1>
-          <section className=' overflow-x-scroll '>
+          <section className=' overflow-x-scroll hide-scrollbar'>
             <Liecenses />
           </section>
         </article>
-        <article ref={ref3} className={`mb-5  ${inView3 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw`}>
-            <h1 className="w-full h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl ">
+
+        <article  ref={ref4} className={`mb-20  ${inView4 && "fade_in_animation" } rounded-3xl  w-[90svw] right-[5svw] neo_shadow overflow-x-scroll sm:bg-pink-300 sm:bg-opacity-70`}>
+        <h1 className=" grid place-items-center w-full h-[9svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl sm:text-xl font-semibold p-1 text_shadow rounded-t-3xl border-b-2 sm:border-none sm:bg-transparent">
+            نظرات مشتریان
+            </h1>
+            <CommentsCards />
+        </article>
+
+        <article ref={ref3} className={`mb-5  ${inView3 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl neo_shadow w-[90svw] right-[5svw] lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center bg-pink-300 bg-opacity-70  text-pink-800 `}>
+            <h1 className="w-full h-[6svh] lg:h-[10svh] text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl lg:w-1/4 grid place-items-center">
             تماس با ما
             </h1>
-            <article className='flex flex-row justify-center items-center  bg-pink-300 bg-opacity-70 rounded-b-3xl'>
-            <Link href="">
-                <Image width={50} src={whatsapp} alt="social medias logo" />
+            <article className='flex flex-row justify-center lg:justify-evenly lg:w-1/4 items-center  bg-pink-300 bg-opacity-70 rounded-b-3xl'>
+            <Link className='hover:wobble' href="">
+                <Image  width={50} src={whatsapp} alt="social medias logo" />
             </Link>
-            <Link href={`tel:${phoneNumber}`}>
-                <Image width={50} src={call} alt="social medias logo" />
+            <Link className='hover:wobble' href={`tel:${phoneNumber}`}>
+                <Image  width={50} src={call} alt="social medias logo" />
             </Link>
-            <Link href="https://www.instagram.com/design.land.shiraz?igsh=MTZ3YnA5cnVmZ2wwNA==">
-                <Image width={50} src={instagram} alt="social medias logo" />
+            <Link className='hover:wobble' href="https://www.instagram.com/design.land.shiraz?igsh=MTZ3YnA5cnVmZ2wwNA==">
+                <Image  width={50} src={instagram} alt="social medias logo" />
             </Link>
             </article>
         </article>
-        <article  ref={ref4} className={`mb-20  ${inView4 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw`}>
-        <h1 className="w-full h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl ">
-            نظرات مشتریان
-            </h1>
-            <CommentsCards/>
-        </article>
+
       </main>
     </>
   );

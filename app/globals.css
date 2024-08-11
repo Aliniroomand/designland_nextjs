@@ -59,7 +59,7 @@ transform:translate(0);
         transform:translate(0);
     }}
     .wobble {
-    animation: wobble 4s ease-in-out infinite ;
+    animation: wobble 5s ease-in-out infinite ;
 }
 .wobble_with_delay{
     animation: wobble 6s ease-in-out infinite forwards;
@@ -198,8 +198,24 @@ transform:translate(0);
   mask-size:contain;
   mask-position: top;
   mask-repeat: no-repeat;
+  color: #00000077;
 }
-  /*______ Custom classes________ */
-          
-  
+.neo_shadow{
+  box-shadow: -3px 3px 3px #000000b7,
+              1px -1px 3px #ffffff,
+        inset -3px 3px 3px #ffffffb7,
+        inset 3px -3px 3px #000000a7 ;
+}
+
+
+  .hide-scrollbar {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Firefox */
+    scrollbar-width: none;
+    -moz-scrollbar-width: none;
   }
+
+}
