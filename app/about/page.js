@@ -4,11 +4,14 @@ import Image from "next/image"
 import Link from "next/link"
 // images
 import BG from "@/src/assets/images/contact us & comments/BG2.jpg"
-import Liecenses from "../_components/Licenses"
 import instagram from "@/src/assets/images/contact us & comments/instagram.svg"
 import whatsapp from "@/src/assets/images/contact us & comments/whatsapp.png"
 import call from "@/src/assets/images/contact us & comments/call.svg"
 import us from "@/src/assets/images/contact us & comments/us.jpg"
+// components
+import CommentsCards from '../_components/CommentsCards';
+import Liecenses from "../_components/Licenses"
+
 
 export default function AboutUsPage() {
   const phoneNumber = "+989171108983";
@@ -25,7 +28,12 @@ export default function AboutUsPage() {
     triggerOnce:true
   });
   const { ref:ref3, inView:inView3 } = useInView({
-    threshold: 0.1,
+    threshold: 0.4,
+    initialInView:true,
+    triggerOnce:true
+  });
+  const { ref:ref4, inView:inView4 } = useInView({
+    threshold: 0.4,
     initialInView:true,
     triggerOnce:true
   });
@@ -56,14 +64,14 @@ export default function AboutUsPage() {
         </article>
 
         <article ref={ref1} className={`mt-10 mb-5 ${inView1 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw` }>
-          <h1 className="w-full h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-3xl mb-3">
+          <h1 className="w-full h-[6svh]  bg-gradient-to-b from-pink-300 via-pink-300 to-[#ffffff00] bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-3xl mb-3">
             دوره های رسمی
           </h1>
           <section className=' overflow-x-scroll '>
             <Liecenses />
           </section>
         </article>
-        <article ref={ref3} className={`mb-20  ${inView3 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw`}>
+        <article ref={ref3} className={`mb-5  ${inView3 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw`}>
             <h1 className="w-full h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl ">
             تماس با ما
             </h1>
@@ -78,6 +86,12 @@ export default function AboutUsPage() {
                 <Image width={50} src={instagram} alt="social medias logo" />
             </Link>
             </article>
+        </article>
+        <article  ref={ref4} className={`mb-20  ${inView4 ? "fade_in_animation" :"fade-out-animation  " } rounded-3xl shadow-lg border-r-2 border-t-2 w-svw`}>
+        <h1 className="w-full h-[6svh] bg-pink-300 bg-opacity-70  text-pink-800 text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl ">
+            نظرات مشتریان
+            </h1>
+            <CommentsCards/>
         </article>
       </main>
     </>
