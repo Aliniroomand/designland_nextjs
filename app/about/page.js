@@ -6,7 +6,7 @@ import Link from "next/link"
 import BG from "@/src/assets/images/contact us & comments/BG2.jpg"
 import BG2 from "@/src/assets/images/Root/borderBG.png"
 import instagram from "@/src/assets/images/contact us & comments/instagram.svg"
-import whatsapp from "@/src/assets/images/contact us & comments/whatsapp.png"
+import whatsapp from "@/src/assets/images/contact us & comments/whatsApp.png"
 import call from "@/src/assets/images/contact us & comments/call.svg"
 import us from "@/src/assets/images/contact us & comments/us.jpg"
 // components
