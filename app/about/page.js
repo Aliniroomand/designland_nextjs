@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 // images
 import BG from "@/src/assets/images/contact us & comments/BG2.jpg"
+import BG2 from "@/src/assets/images/Root/borderBG.png"
 import instagram from "@/src/assets/images/contact us & comments/instagram.svg"
 import whatsapp from "@/src/assets/images/contact us & comments/whatsapp.png"
 import call from "@/src/assets/images/contact us & comments/call.svg"
@@ -41,8 +42,15 @@ export default function AboutUsPage() {
   return (
     <>
       <Image
-        className="fixed h-full z-[-1] w-[200vw] right-0 bottom-0 object-cover  blur-[2.5px] object-right"
+        className="fixed h-full z-[-1] w-[100vw] right-0 bottom-0 object-cover  object-right"
         src={BG}
+        placeholder="blur"
+        quality={80}
+        alt="BG"
+      />
+      <Image
+        className="fixed h-full z-[-1] blur-[1px] w-[200vw] right-0 bottom-0 object-cover  object-right"
+        src={BG2}
         placeholder="blur"
         quality={80}
         alt="BG"
@@ -83,7 +91,7 @@ export default function AboutUsPage() {
             <h1 className="w-full h-[6svh] lg:h-[10svh] text-center text-3xl font-semibold p-1 text_shadow rounded-t-3xl lg:w-1/4 grid place-items-center">
             تماس با ما
             </h1>
-            <article className='flex flex-row justify-center lg:justify-evenly lg:w-1/4 items-center  bg-pink-300 bg-opacity-70 rounded-b-3xl'>
+            <article className='flex flex-row justify-center lg:justify-evenly lg:w-1/4 items-center   rounded-b-3xl'>
             <Link className='hover:wobble' href="">
                 <Image  width={50} src={whatsapp} alt="social medias logo" />
             </Link>

@@ -41,19 +41,19 @@ export default function Navbar() {
                         <Link href="fruit" className="text-amber-800 py-1 ">🍇میوه آرایی</Link>
                     </li>
                 </ul>
+                <li className="text-purple-800 ">
+                    <Link href="about" className="text_shadow">
+                        📩تماس با ما ودرباره ما
+                    </Link>
+                </li>
                 <li className="text-pink-900 text_shadow">
                     <Link href="learning">
                         🎓آموزش ها
                     </Link>
                 </li>
-                <li className="text-purple-800 ">
-                    <Link href="about" className="text_shadow">
-                        📩نظرات و تماس با ما
-                    </Link>
-                </li>
             </ul>
             <section>
-                <Link className="text-pink-900 text_shadow" href="">
+                <Link href="userPanel" className="text-pink-900 text_shadow">
                 🔐حساب کاربری
                 </Link>
             <h1 className="text-red-600 cursor-pointer text_shadow" onClick={()=>setOpenMenu(e=>!e)}>❌بستن منو</h1>
