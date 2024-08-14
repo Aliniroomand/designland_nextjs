@@ -37,7 +37,7 @@ html{
 
 
 
-  /* animations _______ */
+  /*________________________________________ animations _______ */
   
 @keyframes wobble {
 0% {
@@ -128,7 +128,53 @@ transform:translate(0);
 .text_animation{
   animation: text-focus-in 0.5s linear 0s 1 normal backwards;
 }
+@keyframes moveZ {
+  0% {
+    transform: rotateY(0deg)scaleZ(0%);
+  }
+  25% {
+    transform: rotateY(20deg)scaleZ(30%);
+  }
+  50%{
+    transform: rotateY(0deg)scaleZ(0%);
+    
+  }
+  75% {
+    transform: rotateY(-20deg)scaleZ(-30%);
+  }
+  100%{
+    transform: rotateY(0deg)scaleZ(0%);
+
+  }
+
+}
+.moveZ{
+  animation: moveZ 3s linear 0s infinite normal forwards;
+}
+
+@keyframes slidingForBanner {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.slidingForBanner_animation{
+  animation: slidingForBanner 3s linear 0s infinite normal forwards;
+}
   /* ________animations _______ */
+
+
+
+
+
+
+
+
   /* Custom classes */
   .slide-out {
     transform: translateY(-300%);
