@@ -5,7 +5,7 @@
 
 @layer utilities {
 /* root */
-html{
+:root{
   scroll-behavior:smooth;
 
 }
@@ -130,26 +130,45 @@ transform:translate(0);
 }
 @keyframes moveZ {
   0% {
-    transform: rotateY(0deg)scaleZ(0%);
+    transform:rotate(0deg);
+    transform-origin:50% 0;
   }
-  25% {
-    transform: rotateY(20deg)scaleZ(30%);
+  10% {
+    transform:rotate(2deg);
   }
-  50%{
-    transform: rotateY(0deg)scaleZ(0%);
-    
+  20% {
+    transform:rotate(-4deg);
   }
-  75% {
-    transform: rotateY(-20deg)scaleZ(-30%);
+  30% {
+    transform:rotate(4deg);
   }
-  100%{
-    transform: rotateY(0deg)scaleZ(0%);
+  40% {
+    transform:rotate(-4deg);
+  }
+  40% {
+    transform:rotate(4deg);
+  }
+  60% {
+    transform:rotate(-4deg);
+  }
+  70% {
+    transform:rotate(4deg);
+  }
+  80% {
+    transform:rotate(-2deg);
+  }
+  90% {
+    transform:rotate(2deg);
+  }
+  100% {
+    transform:rotate(0deg);
+    transform-origin:50% 0;
+  }
 
-  }
 
 }
 .moveZ{
-  animation: moveZ 3s linear 0s infinite normal forwards;
+  animation: moveZ 5s linear 0s infinite normal forwards;
 }
 
 @keyframes slidingForBanner {
@@ -166,6 +185,8 @@ transform:translate(0);
 .slidingForBanner_animation{
   animation: slidingForBanner 3s linear 0s infinite normal forwards;
 }
+
+
   /* ________animations _______ */
 
 
@@ -264,4 +285,10 @@ transform:translate(0);
     -moz-scrollbar-width: none;
   }
 
+  .colorfull_text{
+    background-image: linear-gradient(to left, violet, indigo, blue, rgb(128, 15, 0), rgb(255, 255, 150), orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
 }

@@ -16,7 +16,7 @@ export default function FruitDesignPage (){
 
     return (
         <main className=" relative md:w-[50svw] mx-auto ">
-        <Image src={BG} quality={50} placeholder="blur" className=" blur-[3px] object-cover  w-svw h-svh sm:object-top  fixed z-[-1] top-0 right-0"/>
+        <Image src={BG} quality={50} placeholder="blur" className=" blur-[2px] object-cover  w-full h-[100vh] sm:object-top  fixed z-[-1] top-0 right-0"/>
         <header className="absolute h-[20svh] top-0 right-0 w-full">
             <article className=" bg-white bg-opacity-70 h-fit text-xl text-center py-4">
                 <h1>
@@ -30,7 +30,7 @@ export default function FruitDesignPage (){
             </article>
 
         </header>
-        <section className="absolute bg-red-900 h-[70svh] w-full top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll">
+        <section className="absolute  h-[70svh] w-full top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll">
         
         </section>
     </main>

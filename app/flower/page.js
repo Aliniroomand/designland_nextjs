@@ -24,8 +24,8 @@ export default function FlowerDesignPage (){
 
 
     return(
-        <article className="flex flex-col h-screen ">
-            <Image src={BG} className="fixed z-[-1] h-svh blur-none object-cover left-0 sm:object-cover object-center w-svw" alt="BG" priority />
+        <article className="flex flex-col h-[100vh] w-vw ">
+            <Image src={BG} className="fixed z-[-1] h-[100vh] blur-none object-cover left-0 object-center w-full" alt="BG" priority />
             <header className=" h-[12svh]">
                 <h1 className="text-xl text-center py-2 bg-white bg-opacity-75 h-1/2 ">
                     کدوم سبک گل آرایی مدنظرتون هست؟

@@ -41,7 +41,7 @@ console.log({selectedOption});
                     </button>
                 </section>
             </header>
-            <section className="absolute bg-red-900 h-[70svh] w-full top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll">
+            <section className="absolute h-[70svh] w-full top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll">
             
             </section>
         </main>
