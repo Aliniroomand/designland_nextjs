@@ -273,20 +273,30 @@ transform:translate(0);
         inset -3px 3px 3px #ffffffb7,
         inset 3px -3px 3px #000000a7 ;
 }
-
+.grid_style_cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  row-gap: 30px;
+}
 
   .hide-scrollbar {
     ::-webkit-scrollbar {
       display: none;
     }
-
-    /* Firefox */
     scrollbar-width: none;
     -moz-scrollbar-width: none;
   }
 
   .colorfull_text{
-    background-image: linear-gradient(to left, violet, indigo, blue, rgb(128, 15, 0), rgb(255, 255, 150), orange, red);
+    background-image: radial-gradient(circle,blue 0%, violet 25%,rgb(246, 255, 0) 25%, red 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 30px #fff;
+  }
+}
+@media (width>765px){
+  .colorfull_text{
+    background-image: radial-gradient(circle, rgb(0, 89, 130) 5%,rgb(255, 242, 0) 10%, red 12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 

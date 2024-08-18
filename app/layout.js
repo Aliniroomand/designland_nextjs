@@ -1,6 +1,8 @@
 import { Baloo_Bhaijaan_2 } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
+import ReturnButton from "./_components/ReturnBackButon";
+
 
 const mainFont = Baloo_Bhaijaan_2({ subsets: ["arabic"],display:"swap" });
 
@@ -15,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${mainFont.className} min-h-screen `}>
         {children}
         <nav className="fixed z-50 ">
+          <ReturnButton/>
           <Navbar/>
         </nav>
       </body>
