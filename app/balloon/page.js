@@ -1,14 +1,15 @@
 import Image from "next/image";
 // import { useState } from "react";
 // sevices
-import { getBalloons } from "../_lib/data_services";
+import BalloonList from "../_components/BalloonList";
 // images
 import BG from "@/src/assets/images/balloon/balloonPage_BG.jpg"
-import BalloonCard from "../_components/BalloonCard";
+import { Suspense } from "react";
+import Loader from "../loading";
 
 
 
-export default async function BalloonDesignPage (){
+export default function BalloonDesignPage (){
     // const [selectedOption,setSelectedOption]=useState({
     //     buckets:false,
     //     design_with_balloon:false,
@@ -16,11 +17,10 @@ export default async function BalloonDesignPage (){
     //     events_design:false
     // })
 
-    const Balloons= await getBalloons()
 
 
     return (
-        <main className=" relative md:w-[50svw] mx-auto ">
+        <main className=" relative w-svw">
             <Image src={BG} quality={50} placeholder="blur" className=" blur-[3px] object-cover h-screen fixed z-[-1] top-0 right-0" alt="bg of balloons"/>
             {/* <header className="absolute h-[20svh] top-0 right-0 w-full">
                 <article className=" bg-white bg-opacity-70 h-fit text-xl text-center py-4">
@@ -43,16 +43,9 @@ export default async function BalloonDesignPage (){
                     </button>
                 </section>
             </header> */}
-            <section className="absolute h-[70svh] w-full top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll grid grid_style_cards ">
-            {Balloons.length > 0 ? 
-                Balloons.map(infos=><BalloonCard key={infos.id} infos={infos}/>)
-            :
-            <h1>
-                موردی برای نمایش نیست
-            </h1>
-            
-            }
-            </section>
+        <Suspense fallback={<Loader/>}>
+            <BalloonList/>
+        </Suspense>
         </main>
     )
 }

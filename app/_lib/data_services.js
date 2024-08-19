@@ -10,6 +10,18 @@ if(error){
 }
 return balloon;
 }
+export async function getBalloonsWithID(id){  
+    let { data: balloon, error } = await supabase
+      .from('balloon')
+      .select("*")
+      .eq('if', `${id}`)
+      .single();
+if(error){
+    console.log(error);
+}
+return balloon;
+}
+
 export async function getFruits(){
     let { data: fruit, error } = await supabase
     .from('fruit')
