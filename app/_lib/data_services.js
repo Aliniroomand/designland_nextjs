@@ -14,7 +14,7 @@ export async function getBalloonsWithID(id){
     let { data: balloon, error } = await supabase
       .from('balloon')
       .select("*")
-      .eq('if', `${id}`)
+      .eq('id', `${id}`)
       .single();
 if(error){
     console.log(error);
@@ -44,5 +44,16 @@ if(error){
     throw new Error("Flowers couldn't be loaded")
 }
 return flower;
+}
+export async function getFlowersWithID(id){  
+    let { data: balloon, error } = await supabase
+      .from('flower')
+      .select("*")
+      .eq('id', `${id}`)
+      .single();
+if(error){
+    console.log(error);
+}
+return balloon;
 }
 

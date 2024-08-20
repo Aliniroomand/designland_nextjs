@@ -1,11 +1,11 @@
-import { getBalloonsWithID } from "@/app/_lib/data_services";
+import { getFlowersWithID } from "@/app/_lib/data_services";
 // image
 import BG from "@/src/assets/images/balloon/BG_for_balloonINF.jpeg"
 import Image from "next/image";
 
 
 export default async function Page({params}){
-    const {created_at,id,name,category,Images}= await getBalloonsWithID(params.id)
+    const {created_at,id,name,category,Images}= await getFlowersWithID(params.id)
     return(
         <section >
             <Image src={BG} quality={100} placeholder="blur" alt="background" className="fixed object-cover h-screen w-screen object-right z-[-1]" />  

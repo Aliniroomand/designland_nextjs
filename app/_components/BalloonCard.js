@@ -26,13 +26,7 @@ export default async function BalloonCard({infos}){
                     </span> 
                     {category}
                 </h2>
-                <p className="text-purple-400 text-sm self-center">
-                    <span className="text-white">
-                    زمان بارگذاری:
-                    </span>
-                    {new Date(created_at).toLocaleDateString("fa-IR")}  
 
-                </p>
             </article>
         </Link>
     )
