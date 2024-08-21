@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 // images
 import BG from "@/src/assets/images/Root/menuIcon.png"
+import { usePathname } from "next/navigation";
 
 
 
 export default function Navbar() {
-
+    const pathname=usePathname()
   const [openMenu, setOpenMenu] = useState(false);
   const [opendesigns, setOpendesigns] = useState(false);
  
@@ -23,7 +24,7 @@ export default function Navbar() {
         <section className={` fixed ${openMenu?"slide-in":" slide-out !translate-y-[-100%]"} w-svw h-[80svh] right-0 top-0 bg-gradient-to-l from-[#fff] to-[#ffffff2d]  backdrop-blur-sm text-base  flex flex-col justify-between pt-4 pb-9 rounded-bl-full sm:w-[30svw] sm:h-svh sm:text-lg  `}>
             <ul className="gap-3 flex flex-col">
                 <li>
-                    <Link href="/" className="text-pink-500 text_shadow">
+                    <Link href="/" className={`text-pink-500 text_shadow ${pathname==="/" && "!text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"} `}>
                     🏠صفحه اصلی
                     </Link>
                 </li>
@@ -32,22 +33,24 @@ export default function Navbar() {
                 </li>
                 <ul className={`${opendesigns?"slide-in":" slide-out hidden"} flex flex-col justify-center items-start mx-6 py-1 text-center  w-1/2 right-[25%] bg-opacity-35 divide-r-[0.5px] border-r-[0.1px] gap-3 border-gray-400 divide-gray-400`}>
                     <li>
-                        <Link href="balloon" className="text-amber-600 py-1  ">🎈بادکنک آرایی</Link>
+                        <Link href="/balloon" className={`text-amber-600 py-1 ${pathname==="/balloon" && "text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"}`}>🎈بادکنک آرایی</Link>
                     </li>
                     <li>
-                        <Link href="flower" className="text-amber-700 py-1 ">🌺گل آرایی </Link>
+                        <Link href="/flower" className={`text-amber-700 py-1 ${pathname==="/flower" && "text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"}`}>🌺گل آرایی </Link>
+                        {
+                        }
                     </li>
                     <li>
-                        <Link href="fruit" className="text-amber-800 py-1 ">🍇میوه آرایی</Link>
+                        <Link href="/fruit" className={`text-amber-800 py-1 ${pathname==="/fruit" && "text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"} `}>🍇میوه آرایی</Link>
                     </li>
                 </ul>
                 <li className="text-purple-800 ">
-                    <Link href="about" className="text_shadow">
+                    <Link href="about" className={`text_shadow ${pathname==="/about" && "text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"}`}>
                         📩تماس با ما ودرباره ما
                     </Link>
                 </li>
                 <li className="text-pink-900 text_shadow">
-                    <Link href="learning">
+                    <Link href="learning" className={`${pathname==="/learning" && "text-black border-b-2 border-black transition-all bg-[#00000060] px-5 rounded-2xl"}`}>
                         🎓آموزش ها
                     </Link>
                 </li>

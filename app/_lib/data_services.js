@@ -29,7 +29,7 @@ export async function getFruits(){
   
 if(error){
     console.log(error);
-    throw new Error("Fruits couldn't be loaded")
+    throw new Error(error,reset)
 }
 return fruit;
 }
@@ -41,12 +41,13 @@ export async function getFlowers(){
   
 if(error){
     console.log(error);
-    throw new Error("Flowers couldn't be loaded")
+    throw new Error("")
+    ;
 }
 return flower;
 }
 export async function getFlowersWithID(id){  
-    let { data: balloon, error } = await supabase
+    let { data: flower, error } = await supabase
       .from('flower')
       .select("*")
       .eq('id', `${id}`)
@@ -54,6 +55,6 @@ export async function getFlowersWithID(id){
 if(error){
     console.log(error);
 }
-return balloon;
+return flower;
 }
 

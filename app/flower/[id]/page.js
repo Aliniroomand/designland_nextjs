@@ -5,7 +5,8 @@ import Image from "next/image";
 
 
 export default async function Page({params}){
-    const {created_at,id,name,category,Images}= await getFlowersWithID(params.id)
+    const {created_at,id,name,category,Images}= await getFlowersWithID(params.id);
+    console.log(params.id);
     return(
         <section >
             <Image src={BG} quality={100} placeholder="blur" alt="background" className="fixed object-cover h-screen w-screen object-right z-[-1]" />  
