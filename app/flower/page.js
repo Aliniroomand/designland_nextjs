@@ -3,6 +3,8 @@ import Image from "next/image";
 // image 
 import BG from "@/src/assets/images/flower designs/BG.jpg"
 import FLowerList from "../_components/FlowerList";
+import { Suspense } from "react";
+import Loader from "../loading";
 
 
 
@@ -45,7 +47,9 @@ export default function FlowerDesignPage (){
                 </ul>
             </header>
             <main className="flex-1 w-4/5 ">
+            <Suspense fallback={<Loader/>}>
                 <FLowerList/>
+            </Suspense>
             </main>
         </article>
     );

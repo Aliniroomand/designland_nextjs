@@ -38,7 +38,7 @@ return(
         {/*___________Title Part */}
 
         {/* Banner part  */}
-        <section className='relative z-20 w-full h-[90svh] top-[10svh] lg:top-[13svh] overflow-y-scroll overflow-x-hidden md:overflow-y-visible flex flex-col lg:flex-col lg:items-center items-center justify-between lg:justify-stretch gap-10 hide-scrollbar'>
+        <section className='relative z-20 w-full h-[87svh] top-[10svh] lg:top-[13svh] overflow-y-scroll overflow-x-hidden md:overflow-y-visible flex flex-col lg:flex-col lg:items-center items-center justify-between lg:justify-stretch gap-10 hide-scrollbar'>
             <article className='relative w-full h-[30svh] top-[0svh] py-3 md:py-6 text-center overflow-visible bg-gradient-to-t from-transparent via-white to-[#ffffff00] bg-opacity-50'>
                 <h1 className='text-lg font-bold lg:text-xl h-10'>
                     پرطرفدار ها
