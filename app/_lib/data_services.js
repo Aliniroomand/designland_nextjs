@@ -33,8 +33,20 @@ if(error){
 }
 return fruit;
 }
-export async function getFlowers(){
+export async function getFruitWithID(id){  
+    let { data: fruit, error } = await supabase
+      .from('fruit')
+      .select("*")
+      .eq('id', `${id}`)
+      .single();
+if(error){
+    console.log(error);
+}
+return fruit;
+}
 
+
+export async function getFlowers(){
     let { data: flower, error } = await supabase
     .from('flower')
     .select('*')

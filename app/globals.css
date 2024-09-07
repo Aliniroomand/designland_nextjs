@@ -9,6 +9,7 @@
   scroll-behavior:smooth;
 
 }
+
 ::-webkit-scrollbar {
   width: 12px;
   border-radius: 100px;
@@ -275,8 +276,10 @@ transform:translate(0);
 }
 .grid_style_cards{
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(208px,1fr));
-  row-gap: 30px;
+  grid-template-columns: repeat(auto-fit,minmax(208px,1fr));
+  grid-template-rows: repeat(auto-fit,minmax(208px,1fr));
+  row-gap: 20px;
+  column-gap: 20px;
 }
 
   .hide-scrollbar {
