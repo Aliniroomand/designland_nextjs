@@ -199,11 +199,11 @@ transform:translate(0);
 
   /* Custom classes */
   .slide-out {
-    transform: translateY(-300%);
+    transform: translateX(-500%);
     transition: transform 0.3s ease-in-out;
 }
   .slide-in {
-    transform: translateY(0%);
+    transform: translateX(0%);
     transition: transform 0.3s ease-in-out;
 }
   
@@ -234,10 +234,10 @@ transform:translate(0);
 
 
 .button {
-  color: #050505;
   padding: 15px 25px;
   border-radius: 14px;
-  font-weight: bold;
+  display: grid;
+  place-items: center;
   font-size: 16px;
   border: 0;
   user-select: none;
