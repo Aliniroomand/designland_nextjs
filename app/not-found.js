@@ -21,7 +21,7 @@ export default function notFound() {
                 <Link href="/" className=" text-2xl neo_shadow px-5 mt-5 rounded-3xl bg-slate-600 transition-all  text-teal-200">
                     بیا برگردیم به صفحه اصلی
                 </Link>
-                <button onClick={()=>router.back} className=" text-2xl neo_shadow px-5 mt-5 rounded-3xl bg-slate-600 transition-all  text-teal-200">
+                <button onClick={()=>router.back()} className=" text-2xl neo_shadow px-5 mt-5 rounded-3xl bg-slate-600 transition-all  text-teal-200">
                 یا اینکه به صفحه قبلی
                 </button>
             </section>

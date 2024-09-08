@@ -3,7 +3,7 @@ import { supabase } from "./supabase";
 export async function getBalloons(){
     let { data: balloon, error } = await supabase
     .from('balloon')
-    .select('*')  
+    .select('*') ;
 if(error){
     console.log(error);
     throw new Error("Balloons couldn't be loaded")
