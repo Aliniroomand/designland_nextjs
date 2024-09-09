@@ -14,7 +14,6 @@ const Filter_for_balloons = () => {
         }
 
     const activedFilter=searchParams.get("category")??"all";
-console.log(activedFilter);
 
     return (
              <header className="absolute h-[20svh] top-0 right-0 w-full">

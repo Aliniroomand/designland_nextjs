@@ -302,7 +302,7 @@ transform:translate(0);
   }
 
   .colorfull_text{
-    background-image: radial-gradient(circle,blue 0%, violet 25%,rgb(246, 255, 0) 25%, rgb(144, 85, 85) 50%);
+    background-image: radial-gradient(circle,blue 0%, violet 10%,rgb(246, 255, 0) 25%, rgb(222, 17, 17) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     box-shadow: 0 0 30px #fff;

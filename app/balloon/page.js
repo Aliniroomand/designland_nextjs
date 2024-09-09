@@ -1,17 +1,15 @@
 import Image from "next/image";
-// import { useState } from "react";
-// sevices
-import BalloonList from "../_components/BalloonList";
+import { Suspense } from "react";
 // images
 import BG from "@/src/assets/images/balloon/balloonPage_BG.jpg"
-import { Suspense } from "react";
+// comps
 import Loader from "../loading";
+import BalloonList from "../_components/BalloonList";
 import Filter_for_balloons from "../_components/Filter_for_balloons";
 
 
 
 export default function BalloonDesignPage ({searchParams}){
-
 const filter=searchParams?.category;
     return (
         <main className=" relative w-svw h-svh overflow-hidden">

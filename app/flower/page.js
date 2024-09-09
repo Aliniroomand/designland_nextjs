@@ -1,54 +1,28 @@
-"use client"
 import Image from "next/image";
+import { Suspense } from "react";
 // image 
 import BG from "@/src/assets/images/flower designs/BG.jpg"
+// comps
 import FLowerList from "../_components/FlowerList";
-import { Suspense } from "react";
 import Loader from "../loading";
+import Filter_for_flowers from "../_components/Filter_for_flowers";
 
 
 
-export default function FlowerDesignPage (){
-    // for category container scrolling
-    const scrollLeft = () => {
-        document.getElementById('container_of_categories').scrollBy({
-            left: -200,
-            behavior: 'smooth',
-        });
-    };
-    
-    const scrollRight = () => {
-        document.getElementById('container_of_categories').scrollBy({
-            left: 200,
-            behavior: 'smooth',
-        });}
-// for category container scrolling
+export default function FlowerDesignPage ({searchParams}){
+    const filter=searchParams?.category
 
 
+
+  
 
     return(
-        <article className="flex flex-col h-[100vh] w-vw ">
-            <Image src={BG} className="fixed z-[-1] h-[100vh] blur-none object-cover left-0 object-center w-full" alt="BG" priority />
-            <header className=" h-[12svh]">
-                <h1 className="text-xl text-center py-2 bg-white bg-opacity-75 h-1/2 ">
-                    کدوم سبک گل آرایی مدنظرتون هست؟
-                </h1>
-                <ul id="container_of_categories" className="relative flex items-center gap-3 text-nowrap mx-10 h-1/2 overflow-x-scroll overflow-y-hidden sm:mt-3 sm:p-3 sm:pb-10 bg-white  bg-opacity-75 border-violet-300 border rounded sm:items-center sm:justify-center sm:w-fit sm:mx-auto"> 
-                    <button onClick={scrollRight} className="fixed right-0 h-[6svh] text-4xl font-extrabold md:hidden">→</button>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">همه</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">جشن ها</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">دسته گل</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">مناسبتی</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">ترحیم</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">باکس گل</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">جام گل</li>
-                    <li className=" border-l px-2 border-yellow-700 pl-4 text-lg text-yellow-950">مینیمال</li>
-                    <button onClick={scrollLeft} className="fixed left-0 h-[6svh] text-4xl font-extrabold md:hidden">←</button>
-                </ul>
-            </header>
-            <main className="flex-1 w-4/5 ">
-            <Suspense fallback={<Loader/>}>
-                <FLowerList/>
+        <article className="flex flex-col h-vh w-vw ">
+            <Image src={BG} className="fixed z-[-1] h-[100vh] blur-[3px] object-cover left-0 object-center w-full" alt="BG" priority />
+            <Filter_for_flowers/>
+            <main className="flex-1 w-4/5 h-[87svh] ">
+            <Suspense fallback={<Loader/>} key={filter}>
+                <FLowerList filter={filter}/>
             </Suspense>
             </main>
         </article>

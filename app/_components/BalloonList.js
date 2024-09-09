@@ -4,25 +4,9 @@ import BalloonCard from "../_components/BalloonCard";
 export default async function BallonList({filter}){
 
     const Balloons= await getBalloons()
+    const filteredBalloons=Balloons?.filter((i)=>i.category.includes(filter))
 
-    let filteredBalloons
-
-        if(filter==="buckets"){
-            filteredBalloons=Balloons.filter((balloon)=>balloon.category.includes("buckets"))
-        }
-        
-        if(filter==="design_with_balloon"){
-            filteredBalloons=Balloons.filter((balloon)=>balloon.category.includes("design_with_balloon"))
-        }
-        
-        if(filter==="arg_design"){
-            filteredBalloons=Balloons.filter((balloon)=>balloon.category.includes("arg_design"))
-        }
-        
-        if(filter==="events_design"){
-            filteredBalloons=Balloons.filter((balloon)=>balloon.category.includes("events_design"))
-        }
-        
+      
         
 return(
 
