@@ -23,11 +23,10 @@ export default async function BallonList({filter}){
             filteredBalloons=Balloons.filter((balloon)=>balloon.category.includes("events_design"))
         }
         
-console.log(Balloons);
         
 return(
 
-    <section className="absolute h-[70svh] w-full right-0 top-[26svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll grid grid_style_cards p-4">
+    <section className="absolute h-[70svh] w-full right-0 top-[28svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll grid grid_style_cards p-4">
 {filteredBalloons?.length > 0 ? 
     filteredBalloons?.map(infos=><BalloonCard key={infos.id} infos={infos}/>)
     :
@@ -36,6 +35,7 @@ return(
 </h1>
 
 }
+
 </section>
 )
 }

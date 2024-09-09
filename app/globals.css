@@ -280,7 +280,18 @@ transform:translate(0);
   grid-template-rows: repeat(auto-fit,minmax(208px,1fr));
   row-gap: 20px;
   column-gap: 20px;
+
 }
+@media (width< 1024px) {
+  .grid_style_cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(144px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(144px,1fr));
+    row-gap: 20px;
+    column-gap: 20px;
+  
+  }
+  }
 
   .hide-scrollbar {
     ::-webkit-scrollbar {
@@ -291,7 +302,7 @@ transform:translate(0);
   }
 
   .colorfull_text{
-    background-image: radial-gradient(circle,blue 0%, violet 25%,rgb(246, 255, 0) 25%, red 50%);
+    background-image: radial-gradient(circle,blue 0%, violet 25%,rgb(246, 255, 0) 25%, rgb(144, 85, 85) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     box-shadow: 0 0 30px #fff;
