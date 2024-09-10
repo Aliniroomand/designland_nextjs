@@ -1,5 +1,5 @@
 import Images_slider from "@/app/_components/Images_slider";
-import Similar_items_for_Balloon from "@/app/_components/Similar_items_for_Balloon";
+import Similar_items from "@/app/_components/Similar_items";
 import { getBalloons, getBalloonsWithID } from "@/app/_lib/data_services";
 // image
 import BG from "@/src/assets/images/balloon/BG_for_balloonINF.jpeg"
@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default async function Page({params}){
     const {id,name,Images,category}= await getBalloonsWithID(params.id)
-    const AllBallons= await getBalloons()
+    const All= await getBalloons()
 
     return(
         <section className="flex flex-col  justify-between" >
@@ -33,7 +33,7 @@ export default async function Page({params}){
                 </section>
                 <section className=" flex flex-col items-center justify-between h-[20vh]  w-full lg:w-2/3 mx-auto bg-[#0000007e] my-3 rounded-3xl ">
                     <h1 className=" w-full  text-center text-white text-2xl" >موارد مشابه</h1>
-                    <Similar_items_for_Balloon category={category} AllBallons={AllBallons} />
+                    <Similar_items category={category} All={All} id={id}/>
                 </section>
         </section>
 

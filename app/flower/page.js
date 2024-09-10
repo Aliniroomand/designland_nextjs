@@ -10,7 +10,7 @@ import Filter_for_flowers from "../_components/Filter_for_flowers";
 
 
 export default function FlowerDesignPage ({searchParams}){
-    const filter=searchParams?.category
+    const filter=searchParams?.category ?? "all"
 
 
 

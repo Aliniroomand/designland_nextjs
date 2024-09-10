@@ -18,7 +18,7 @@ export default function Error({error}) {
                 <p className=" mx-auto w-fit md:text-2xl text-xl font-semibold text-teal-900 m-3">
                     به نظر میاد یه مشکل و ارور پیش اومده !!! 
                 </p>
-                <p className=" mx-auto md:w-fit w-svw md:text-xl text-base text-wrap h-fit text-teal-100 m-1 p-3 right-0 bg-teal-900 rounded-xl">
+                <p className=" mx-auto md:w-fit w-svw md:text-xl text-base text-wrap h-fit text-teal-100 m-1 p-3 right-0 bg-teal-900 rounded-xl neo_shadow">
                     متن ارور <br/>
                         {`{{ ${error.message} }}`}
                 </p>

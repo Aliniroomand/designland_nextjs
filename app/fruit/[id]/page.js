@@ -1,44 +1,38 @@
-import {  getFruitWithID } from "@/app/_lib/data_services";
+import Images_slider from "@/app/_components/Images_slider";
+import Similar_items from "@/app/_components/Similar_items";
+import {  getFruits, getFruitWithID } from "@/app/_lib/data_services";
 // image
 import BG from "@/src/assets/images/fruit design/mainBG.jpg"
 import Image from "next/image";
 
 
 export default async function Page({params}){
-    const {created_at,id,name,category,Images}= await getFruitWithID(params.id);
-    return(
-        <section >
-            <Image src={BG} quality={100} placeholder="blur" alt="background" className="fixed object-cover object-right lg:object-fill h-screen w-screen lg:object-top  z-[-1]" />  
-                <section className="relative h-[90vh] w-[80vw] lg:w-[50vw] mx-auto top-[5vh] flex flex-col items-center justify-start neo_shadow rounded-3xl bg-[#ffffffa6] font-semibold px-2">
-                    <Image src={Images} width={300} height={100} layout="fixed" className=" h-1/2 min-w-fit max-w-[100%] rounded-3xl neo_shadow " alt={`عکس میوه آرایی کد ${id}`}/>
-                    <section className="h-1/2 top-1/2 rounded-3xl flex flex-col items-center justify-between py-5 backdrop-blur-none text-center">
-                        <h1 className="text-4xl lg:text-2xl w-full font-bold h-1/4">
-                            {name}
-                        </h1>
-                        <h2 className="text-black text-xl ">
-                            <span className="text-purple-950">
-                            کد:
-                            </span>
-                            {id}  
-                        </h2>
-                        <p className="text-black text-xl lg:text-base self-center">
-                            <span className="text-purple-950 text-xl lg:text-base">
-                            دسته بندی :
-                            </span>
-                            {category}  
-                        </p>
-                        <p className="text-black text-xl lg:text-base self-center">
-                            <span className="text-purple-950 text-xl lg:text-base">
-                            زمان بارگذاری:
-                            </span>
-                            {new Date(created_at).toLocaleDateString("fa-IR")}  
-                        </p>
-                        <section className="lg:text-base">
-                            افزودن به پسندیده ها
-                        </section>
+    const {id,name,category,Images}= await getFruitWithID(params.id);
+    const All=await getFruits()
+    return(<section className="flex flex-col  justify-between" >
+        <Image src={BG} quality={50} placeholder="blur" alt="background" className="fixed object-cover h-screen blur-[2px] w-screen object-right z-[-1]" />  
+            <section className="relative h-[65svh] w-full lg:w-[50vw] lg:h-[75vh] mx-auto top-[1vh] flex flex-col items-center justify-start  rounded-3xl  font-semibold overflow-hidden">
+                <Images_slider images={Images} id={id}/>
+                <section className=" absolute h-1/4 top-0 w-full  rounded-3xl flex flex-row items-start justify-start p-1 backdrop-blur-none text-center z-30 bg-gradient-to-b from-white via-[#ffffffd6] to-transparent">
+                    <h1 className="text-xl lg:text-2xl w-full font-bold h-1/4">
+                        {name}
+                    </h1>
+                    <h2 className="text-black text-xl lg:text-2xl">
+                        <span className="text-purple-950 text-xl">
+                        کد:
+                        </span>
+                        {id}  
+                    </h2>
+
+                    <section className="lg:text-base">
+                        افزودن به پسندیده ها
                     </section>
                 </section>
-        </section>
-
+            </section>
+            <section className=" flex flex-col items-center justify-between h-[20vh]  w-full lg:w-2/3 mx-auto bg-[#0000007e] my-3 rounded-3xl ">
+                <h1 className=" w-full  text-center text-white text-2xl" >موارد مشابه</h1>
+                <Similar_items category={category} All={All} name={name} id={id} />
+            </section>
+    </section>
     )
 }

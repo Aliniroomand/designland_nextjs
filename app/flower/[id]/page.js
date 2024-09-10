@@ -4,7 +4,7 @@ import { getFlowersWithID,getFlowers } from "@/app/_lib/data_services";
 // images
 import BG from "@/src/assets/images/flower designs/BG2.jpg"
 import Images_slider from "@/app/_components/Images_slider";
-import Similar_items_for_flower from "@/app/_components/Similar_items_for_flower";
+import Similar_items from "@/app/_components/Similar_items";
 
 export const revalidate=10
 
@@ -35,7 +35,7 @@ export default async function Page({params}){
                 </section>
                 <section className=" flex flex-col items-center justify-between h-[20vh]  w-full lg:w-2/3 mx-auto bg-[#0000007e] my-3 rounded-3xl ">
                     <h1 className=" w-full  text-center text-white text-2xl" >موارد مشابه</h1>
-                    <Similar_items_for_flower category={category} AllFlowers={AllFlowers} />
+                    <Similar_items category={category} All={All} name={name} id={id}/>
                 </section>
         </section>
 
