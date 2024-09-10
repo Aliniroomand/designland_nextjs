@@ -15,7 +15,7 @@ export default async function Page({params}){
             <Image src={BG} quality={50} placeholder="blur" alt="background" className="fixed object-cover h-screen blur-md w-screen object-right z-[-1]" />  
                 <section className="relative h-[65svh] w-full lg:w-[50vw] lg:h-[75vh] mx-auto top-[1vh] flex flex-col items-center justify-start  rounded-3xl  font-semibold px-2  overflow-hidden">
                     <Images_slider images={Images} id={id}/>
-                    <section className=" absolute h-1/4 top-0 w-full  rounded-3xl flex flex-col items-center justify-start p-1 backdrop-blur-none text-center z-30 bg-gradient-to-b from-white via-[#ffffffd6] to-transparent">
+                    <section className=" absolute h-1/4 top-0 w-full  rounded-3xl flex flex-row items-start justify-start p-1 backdrop-blur-none text-center z-30 bg-gradient-to-b from-white via-[#ffffffd6] to-transparent">
                         <h1 className="text-xl lg:text-2xl w-full font-bold h-1/4">
                             {name}
                         </h1>

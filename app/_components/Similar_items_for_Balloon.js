@@ -9,7 +9,7 @@ const Similar_items_for_Balloon = ({category,AllBallons}) => {
     const ref=useRef(null)
 
     const similar=AllBallons?.filter(i=>i.category===category);
-console.log(similar);
+    
     const scrollLeft = () => {
         if (ref.current) {
             ref.current.scrollBy({ left: -300, behavior: 'smooth' });
