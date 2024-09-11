@@ -11,7 +11,7 @@ import contactUs from "@/src/assets/images/Root/contactUs_transparent.png"
 import learning from "@/src/assets/images/Root/teach_transparent.png"
 import rope from "@/src/assets/images/Root/Rope.png"
 import stick from "@/src/assets/images/Root/stick.png"
-import example from "@/src/assets/images/Root/new_design_with_flower___.jpg"
+import example from "@/src/assets/images/Root/code2.jpg"
 import ContactUs from './ContactUs';
 
 

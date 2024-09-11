@@ -23,6 +23,46 @@ return(
 </h1>
 
 }
+{filteredFlowers?.length > 0 ? 
+    filteredFlowers?.map(infos=><FlowerCard key={infos.id} infos={infos}/>)
+    :
+<h1 className=" text-xl md:text-2xl  bg-red-100 bg-opacity-70 grid place-self-center text-yellow-950 p-10 rounded-3xl font-bold ">
+    موردی برای نمایش نیست
+</h1>
+
+}
+{filteredFlowers?.length > 0 ? 
+    filteredFlowers?.map(infos=><FlowerCard key={infos.id} infos={infos}/>)
+    :
+<h1 className=" text-xl md:text-2xl  bg-red-100 bg-opacity-70 grid place-self-center text-yellow-950 p-10 rounded-3xl font-bold ">
+    موردی برای نمایش نیست
+</h1>
+
+}
+{filteredFlowers?.length > 0 ? 
+    filteredFlowers?.map(infos=><FlowerCard key={infos.id} infos={infos}/>)
+    :
+<h1 className=" text-xl md:text-2xl  bg-red-100 bg-opacity-70 grid place-self-center text-yellow-950 p-10 rounded-3xl font-bold ">
+    موردی برای نمایش نیست
+</h1>
+
+}
+{filteredFlowers?.length > 0 ? 
+    filteredFlowers?.map(infos=><FlowerCard key={infos.id} infos={infos}/>)
+    :
+<h1 className=" text-xl md:text-2xl  bg-red-100 bg-opacity-70 grid place-self-center text-yellow-950 p-10 rounded-3xl font-bold ">
+    موردی برای نمایش نیست
+</h1>
+
+}
+{filteredFlowers?.length > 0 ? 
+    filteredFlowers?.map(infos=><FlowerCard key={infos.id} infos={infos}/>)
+    :
+<h1 className=" text-xl md:text-2xl  bg-red-100 bg-opacity-70 grid place-self-center text-yellow-950 p-10 rounded-3xl font-bold ">
+    موردی برای نمایش نیست
+</h1>
+
+}
 </section>
 )
 }

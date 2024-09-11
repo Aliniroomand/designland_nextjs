@@ -10,7 +10,7 @@ export const revalidate=10
 
 export default async function Page({params}){
     const {id,name,category,Images}= await getFlowersWithID(params.id);
-    const AllFlowers=await getFlowers();
+    const All=await getFlowers();
 
     return(
         <section className="flex flex-col  justify-between" >
