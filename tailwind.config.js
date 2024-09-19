@@ -16,6 +16,12 @@ module.exports = {
         Black:"#141010",
         lightBG:"#a8b1eb",
         lightBG2:"#96cfec",
+        darkBG:"rgb(55, 41, 67)",
+    },
+    backgroundImage: {
+      'darkBG2': 'linear-gradient(124.18deg, #4e375a 0%, #1C1A26 66.6%)',
+      "darkBG3":"linear-gradient(274.17deg, #C41BD3 5.71%, #790FCB 73.06%)",
+
     },
     dropShadow:{
       "4xl":"-5px 5px 3px #2b2b2b",
@@ -24,8 +30,8 @@ module.exports = {
       "text":"1px -1px 3px #fff",
     },
     boxShadow:{
-      "bottom_left":"-3px 3px 3px #00000077 "
-
+      "bottom_left":"-3px 3px 3px #00000077 ",
+      "darkBox":"0px 1px 2px rgba(0, 0, 0, 1), 0px 2px 6px rgba(0, 0, 0, 0.5)",
     }
     
   },

@@ -260,6 +260,9 @@ transform:translate(0);
   color:#f97fbc;
 }
 
+.dark_button{
+  background: #2b283f;
+}
 
 .maskForImages{
   mask-image: url('../src/assets/images/Root/images_mask.png');
