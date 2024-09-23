@@ -1,9 +1,9 @@
-import LoginForm from "../_components/loginForm";
+import LoginForm from "../_components/LoginForm";
 
 const page = () => {
     return (
         <article className=" bg-darkBG w-svw min-h-svh ">
-           <LoginForm/>
+            <LoginForm/>
         </article>
     );
 };

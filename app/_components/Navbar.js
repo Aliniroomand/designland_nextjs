@@ -56,7 +56,7 @@ export default function Navbar() {
                 </li>
             </ul>
             <section>
-                <Link href="userPanel" className="text-pink-900 text_shadow">
+                <Link href="login" className="text-pink-900 text_shadow">
                 🔐حساب کاربری
                 </Link>
             <h1 className="text-red-600 cursor-pointer text_shadow" onClick={()=>setOpenMenu(e=>!e)}>❌بستن منو</h1>

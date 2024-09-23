@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { supabase } from "./supabase";
 
 export async function getBalloons(){
@@ -70,3 +71,22 @@ if(error){
 return flower;
 }
 
+// auth
+
+export async function loginUser(email,password){
+
+let { data, error } = await supabase.auth.signInWithPassword({
+
+        email:email,
+        password: password
+
+    })
+        if(error){
+            toast.error(`error in loginUser:"${error}"`)
+        } 
+        console.log(data);
+        return data
+    
+}
+
+  
