@@ -5,6 +5,7 @@ import { useState } from "react";
 // images
 import BG from "@/src/assets/images/Root/menuIcon.png"
 import { usePathname } from "next/navigation";
+import { getCookie } from "../_lib/cookie";
 
 
 
@@ -12,14 +13,17 @@ export default function Navbar() {
     const pathname=usePathname()
   const [openMenu, setOpenMenu] = useState(false);
   const [opendesigns, setOpendesigns] = useState(false);
- 
+  const [isLoading,setIsLoading]=useState(false)
+
+ const access_token=getCookie("access_token")
+  
   return (
     <article>
-        <section className="fixed grid place-items-center w-24 h-24 left-0 bottom-0 cursor-pointer " onClick={()=>setOpenMenu(e=>!e)}>
+        <section className="fixed grid place-items-center w-24 h-24 left-0 bottom-0 cursor-pointer " onClick={()=>{setIsLoading(true);setOpenMenu(e=>!e);setIsLoading(false)}}>
             <h1 className="z-[55] text-white text-2xl "  >
                 منو
             </h1>
-            <Image className="absolute inset-auto object-cover opacity-90" src={BG} alt="BG" />
+            <Image className={`absolute inset-auto object-cover opacity-90 ${isLoading&&" grayscale"}`} src={BG} alt="BG" />
         </section>
         <section className={` fixed ${openMenu?"slide-in":" slide-out !translate-y-[-100%]"} w-svw h-[80svh] right-0 top-0 bg-gradient-to-l from-[#fff] to-[#ffffff2d]  backdrop-blur-sm text-base  flex flex-col justify-between pt-4 pb-9 rounded-bl-full sm:w-[30svw] sm:h-svh sm:text-lg  `}>
             <ul className="gap-3 flex flex-col">
@@ -56,8 +60,8 @@ export default function Navbar() {
                 </li>
             </ul>
             <section>
-                <Link href="login" className="text-pink-900 text_shadow">
-                🔐حساب کاربری
+                <Link href={access_token? "/adminPanel" :"/login" } className="text-pink-900 text_shadow">
+                🔐ادمین پنل
                 </Link>
             <h1 className="text-red-600 cursor-pointer text_shadow" onClick={()=>setOpenMenu(e=>!e)}>❌بستن منو</h1>
             </section>

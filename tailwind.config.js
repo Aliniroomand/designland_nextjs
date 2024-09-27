@@ -16,11 +16,10 @@ module.exports = {
         Black:"#141010",
         lightBG:"#a8b1eb",
         lightBG2:"#96cfec",
-        darkBG:"rgb(55, 41, 67)",
     },
     backgroundImage: {
-      'darkBG2': 'linear-gradient(124.18deg, #4e375a 0%, #1C1A26 66.6%)',
-      "darkBG3":"linear-gradient(274.17deg, #C41BD3 5.71%, #790FCB 73.06%)",
+      'darkBG2': 'linear-gradient(124.18deg,rgb(2, 44, 34) 0%, rgb(5, 150, 105) 66.6%)',
+      "darkBG3":"linear-gradient(274.17deg, #059669 5.71%,#022C22 73.06%)",
 
     },
     dropShadow:{

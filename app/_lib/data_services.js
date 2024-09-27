@@ -74,19 +74,31 @@ return flower;
 // auth
 
 export async function loginUser(email,password){
-
-let { data, error } = await supabase.auth.signInWithPassword({
-
+    let { data, error } = await supabase.auth.signInWithPassword({
+        
         email:email,
         password: password
 
     })
         if(error){
-            toast.error(`error in loginUser:"${error}"`)
-        } 
-        console.log(data);
-        return data
-    
-}
+            if(error.toString().includes("Invalid"&&"login"&&"credentials")){
 
-  
+                toast.error("ایمیل یا پسورد را اشتباه وارد کرده اید")
+                return
+            }
+            toast.error(` درخواست شما با خطا موجه شده است:"${error}"`)
+        }
+
+        return data
+        
+    }
+    
+export async function newUser(refresh_token){
+const { data, error } = await supabase.auth.refreshSession({ refreshToken:refresh_token});
+
+if (error) {
+  toast.error(`Failed to refresh session: "${error.message}"`);
+  console.log(data);
+  return null;
+}
+}
