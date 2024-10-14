@@ -31,11 +31,7 @@ return(
             alt="BG"
         />
 
-        {/* Title Part */}
-            <p className='fixed z-30 h-[10svh] sm:h-[15svh] top-0 sm:text-xl text-3xl grid place-items-center lg:text-3xl backdrop-blur w-full font-semibold sm:py-2 py-3 text_animation color_animation colorfull_text shadow-2xl'>
-            ❦ دنیای رنگی دیزاین لند❦
-            </p>
-        {/*___________Title Part */}
+
 
         {/* Banner part  */}
         <section className='relative z-20 w-full h-[87svh] top-[10svh] lg:top-[13svh] overflow-y-scroll overflow-x-hidden md:overflow-y-visible flex flex-col lg:flex-col lg:items-center items-center justify-between lg:justify-stretch gap-10 hide-scrollbar'>

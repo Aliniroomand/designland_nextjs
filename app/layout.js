@@ -14,14 +14,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
+
   return (
     <html lang="fa" dir="rtl" >
-      <body className={`${mainFont.className} min-h-screen `}>
+      <body className={`${mainFont.className} min-h-screen relative `}>
         <Toaster position="top-center"/>
-        {children}
+          <Navbar/>
+          <main className="absolute top-[9svh]">
+          {children}
+          </main>
         <nav className="fixed z-50 ">
           <ReturnButton/>
-          <Navbar/>
         </nav>
       </body>
     </html>
