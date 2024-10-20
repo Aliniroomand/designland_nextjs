@@ -5,6 +5,9 @@
 
 @layer utilities {
 /* root */
+*{
+  font-weight: 600;
+}
 :root{
   scroll-behavior:smooth;
   box-sizing: border-box;
@@ -222,7 +225,7 @@ transform:translate(0);
 }
 
 .text_shadow{
-    text-shadow: 1px 1px 1px #000000a7, 3px -3px 3px #ffffff54 ;
+    text-shadow: 1px 1px 1px #00000052, 3px -3px 3px #ffffff54 ;
 }
 .images_shadow{
     filter: drop-shadow(-5px 5px 3px #2b2b2b)drop-shadow(0px -2px 7px #ffffff96);

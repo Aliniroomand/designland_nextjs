@@ -20,7 +20,7 @@ export default async function Home() {
             alt="BG"
         />
 
-        <section className='relative z-20 w-[98svw] mx-[0.5svw] h-[87svh] top-[10svh] lg:top-[13svh] overflow-y-scroll overflow-x-hidden md:overflow-y-visible flex flex-col lg:flex-col lg:items-center items-center justify-between lg:justify-stretch gap-10 hide-scrollbar '>
+        <section className='relative z-20 w-[98svw] mx-[0.5svw] h-[87svh]  overflow-y-scroll overflow-x-hidden md:overflow-y-visible flex flex-col lg:flex-col lg:items-center items-center justify-between lg:justify-stretch gap-10 hide-scrollbar '>
 
             <Banner/>
             <MainPageItems/>
