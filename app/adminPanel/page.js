@@ -15,7 +15,6 @@ export default function page(){
 
     return(
         <section>
-            <h1>به حساب کاربریتون خوش اومدید </h1>
             <section></section>
             <section></section>
         </section>

@@ -6,7 +6,10 @@ const AdminNavbar = () => {
     const path=usePathname();
     console.log(path);
     return (
-        <header className="w-full flex flex-row items-center text-center md:w-1/6 md:flex-col md:items-start md:h-full md:gap-3 text-teal-950 ">
+        <header>
+            <h1 className="text-center text-teal-900">به حساب کاربریتون خوش اومدید </h1>
+            <section className="w-full flex flex-row items-center text-center md:flex-col md:items-start md:h-full md:gap-3 text-teal-950 mt-5 ">
+
             <Link
             className={`border-l-2 border-teal-900 text-[10px] md:text-xs h-10 grid items-center rounded-full px-1 w-1/4 md:w-full  bg-teal-300 ${path=== "/adminPanel/posts"&& "bg-teal-900 text-teal-300"} transition-all`}
             href='/adminPanel/posts'
@@ -28,6 +31,7 @@ const AdminNavbar = () => {
             href='/adminPanel/aboutUs-configs'>
             تنظیمات درباره ما
             </Link>
+        </section>
         </header>
     );
 };

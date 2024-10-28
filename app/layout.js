@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className={`${mainFont.className} min-h-screen relative`}>
         <Toaster position="top-center"/>
           <Navbar/>
-          <main className="absolute top-[10svh] ">
+          <main className="absolute w-full top-[10svh] ">
           {children}
           </main>
         <nav className="fixed z-50 ">
