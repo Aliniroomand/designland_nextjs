@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation';
 
 const AdminNavbar = () => {
     const path=usePathname();
-    console.log(path);
     return (
         <header>
             <h1 className="text-center text-teal-900">به حساب کاربریتون خوش اومدید </h1>

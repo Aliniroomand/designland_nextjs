@@ -31,7 +31,7 @@ export default async function Page({params}){
             </section>
             <section className=" flex flex-col items-center justify-between h-[20vh]  w-full lg:w-2/3 mx-auto bg-[#0000007e] my-3 rounded-3xl ">
                 <h1 className=" w-full  text-center text-white text-2xl" >موارد مشابه</h1>
-                <Similar_items category={category} All={All} name={name} id={id} />
+                <Similar_items category={category} All={All}  />
             </section>
     </section>
     )

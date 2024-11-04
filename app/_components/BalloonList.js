@@ -4,10 +4,8 @@ import BalloonCard from "../_components/BalloonCard";
 export default async function BallonList({filter}){
 
     const Balloons= await getBalloons()
-    const filteredBalloons=Balloons?.filter((i)=>i.category.includes(filter))
+    const filteredBalloons=Balloons.filter((i)=>i.category.split(" ").includes(filter))
 
-      
-        
 return(
 
     <section className="absolute h-[70svh] w-full right-0 top-[28svh] sm:top-[35svh] sm:h-[64svh] overflow-y-scroll grid grid_style_cards p-4">

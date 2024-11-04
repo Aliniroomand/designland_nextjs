@@ -1,17 +1,23 @@
 import toast from "react-hot-toast";
 import { supabase } from "./supabase";
+import { revalidatePath } from "next/cache";
 
 export async function getBalloons(){
+    revalidatePath("")
+
     let { data: balloon, error } = await supabase
     .from('balloon')
-    .select('*') ;
+    .select('*')
 if(error){
     console.log(error);
     throw new Error("Balloons couldn't be loaded")
 }
 return balloon;
 }
+
 export async function getBalloonsWithID(id){  
+    revalidatePath("")
+
     let { data: balloon, error } = await supabase
       .from('balloon')
       .select("*")

@@ -1,9 +1,18 @@
+"use client"
 import React from 'react';
 import Post from './post';
 import Loader from '@/app/loading';
 import { Suspense } from 'react';
+import { getBalloons, getFlowers, getFruits } from '@/app/_lib/data_services';
 
-const PostsList = () => {
+const PostsList = async () => {
+    const balloonPosts=await getBalloons();
+    const fruitPosts=await getFruits();
+    const flowerPosts=await getFlowers();
+
+    const wholeOfPosts=[...balloonPosts,...fruitPosts,...flowerPosts];
+
+    
     return (
         <article className=" h-full border-[0.5px] border-black w-[96%] mt-1 shadow-darkBox rounded-2xl overflow-y-scroll" >
             <header className="flex justify-around">
@@ -19,16 +28,23 @@ const PostsList = () => {
             </section>
 
             </header>
-            <Suspense fallback={<Loader/>} >
+            {/* {<Suspense fallback={<Loader/>} > */}
             <main >
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+                {
+                wholeOfPosts.map((i)=>
+                    <Post 
+                        key={i.id}
+                        id={i.id}
+                        image={i.Images}
+                        category={i.category}
+                        created_at={i.created_at}
+                        name={i.name}
+                    />
+                )
+                }
+
             </main>
-            </Suspense>
+            {/* </Suspense> } */}
         </article>
     );
 };

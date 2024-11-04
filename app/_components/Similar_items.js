@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useRef } from 'react';
 
-const Similar_items = ({All,category,name,id}) => {
+const Similar_items = ({All,category}) => {
     const ref=useRef(null)
     const pathname=usePathname().trim().split("/")[1];
-    console.log(pathname);
     const similar=All?.filter(i=>i.category===category);
+    console.log(similar);
+    similar.map(i=>console.log(i.name))
     
     const scrollLeft = () => {
         if (ref.current) {
@@ -33,10 +34,10 @@ const Similar_items = ({All,category,name,id}) => {
                     <Link key={infos.id} href={`/${pathname}/${infos.id}`} className="group flex-none mx-3 relative w-20 h-20 neo_shadow rounded-[50%] overflow-hidden grid place-items-center">
                             <Image src={infos.Images.split(",")[0]} fill className=" group-hover:scale-150 transition-all absolute z-20 rounded-[50%] " alt={`${infos.name}`}/>
                             <p className="absolute hidden group-hover:flex h-fit w-full z-50 rounded-[50%] text-clip overflow:hidden bg-red-100 bg-opacity-80 text-center text-xs justify-center items-center transition-all font-semibold py-2">
-                                {`${name.split(" ").splice(0,6).join(" ")}...`}
+                                {`${infos.name.split(" ").splice(0,6).join(" ")}...`}
                             </p>
                             <p className="absolute flex group-hover:hidden h-fit w-full z-50 rounded-[50%] text-clip overflow:hidden bg-white bg-opacity-80 text-center font-semibold text-xs justify-center items-center transition-all">
-                                {` کد : ${id}`}
+                                {` کد : ${infos.id}`}
                             </p>
                         </Link>
                             )
