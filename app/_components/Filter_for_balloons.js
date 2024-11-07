@@ -17,7 +17,7 @@ const Filter_for_balloons = () => {
 
     return (
              <header className="absolute h-[20svh] top-0 right-0 w-full">
-                <article className=" bg-white bg-opacity-70 h-fit text-xl text-center py-4 font-bold">
+                <article className=" bg-gradient-to-b from-transparent to-white via-white bg-opacity-70 h-fit text-xl text-center py-4 font-bold">
                     <h1>
                     دسته بندی مورد نظر خودتون رو انتخاب کنید
                     </h1>

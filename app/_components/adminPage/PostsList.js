@@ -1,9 +1,10 @@
-"use client"
+// "use client"
 import React from 'react';
 import Post from './post';
 import Loader from '@/app/loading';
 import { Suspense } from 'react';
 import { getBalloons, getFlowers, getFruits } from '@/app/_lib/data_services';
+import PostsSorting from './PostsSorting';
 
 const PostsList = async () => {
     const balloonPosts=await getBalloons();
@@ -19,16 +20,11 @@ const PostsList = async () => {
 
             <h1 className="text-xl neo_shadow w-full rounded-full bg-teal-400">لیست پستها</h1>
             <section className="text-xs border-none  ">
-                مرتب کردن بر اساس : 
-                    <select className="outline-none">
-                        <option  >دسته بندی</option>
-                        <option >تاریخ بارگذاری</option>
-                        <option >کد</option>
-                    </select>
+                <PostsSorting/>
             </section>
 
             </header>
-            {/* {<Suspense fallback={<Loader/>} > */}
+            {<Suspense fallback={<Loader/>} >
             <main >
                 {
                 wholeOfPosts.map((i)=>
@@ -44,7 +40,7 @@ const PostsList = async () => {
                 }
 
             </main>
-            {/* </Suspense> } */}
+            </Suspense> }
         </article>
     );
 };

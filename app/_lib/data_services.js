@@ -3,8 +3,8 @@ import { supabase } from "./supabase";
 import { revalidatePath } from "next/cache";
 
 export async function getBalloons(){
-    revalidatePath("")
 
+    revalidatePath("/balloons")
     let { data: balloon, error } = await supabase
     .from('balloon')
     .select('*')
@@ -16,7 +16,7 @@ return balloon;
 }
 
 export async function getBalloonsWithID(id){  
-    revalidatePath("")
+    revalidatePath("/balloons")
 
     let { data: balloon, error } = await supabase
       .from('balloon')
