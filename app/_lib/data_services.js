@@ -1,80 +1,31 @@
+"use client"
 import toast from "react-hot-toast";
 import { supabase } from "./supabase";
 import { revalidatePath } from "next/cache";
 
-export async function getBalloons(){
+export async function getAllPosts(){
 
-    revalidatePath("/balloons")
-    let { data: balloon, error } = await supabase
-    .from('balloon')
+    let { data, error } = await supabase
+    .from('products')
     .select('*')
+            
 if(error){
     console.log(error);
     throw new Error("Balloons couldn't be loaded")
 }
-return balloon;
+return data;
 }
+export async function getProductsWithID(id){  
 
-export async function getBalloonsWithID(id){  
-    revalidatePath("/balloons")
-
-    let { data: balloon, error } = await supabase
-      .from('balloon')
+    let { data: singleProduct, error } = await supabase
+      .from('products')
       .select("*")
       .eq('id', `${id}`)
       .single();
 if(error){
     console.log(error);
 }
-return balloon;
-}
-
-export async function getFruits(){
-    let { data: fruit, error } = await supabase
-    .from('fruit')
-    .select('*')
-  
-if(error){
-    console.log(error);
-    throw new Error(error,reset)
-}
-return fruit;
-}
-export async function getFruitWithID(id){  
-    let { data: fruit, error } = await supabase
-      .from('fruit')
-      .select("*")
-      .eq('id', `${id}`)
-      .single();
-if(error){
-    console.log(error);
-}
-return fruit;
-}
-
-
-export async function getFlowers(){
-    let { data: flower, error } = await supabase
-    .from('flower')
-    .select('*')
-  
-if(error){
-    console.log(error);
-    throw new Error("")
-    ;
-}
-return flower;
-}
-export async function getFlowersWithID(id){  
-    let { data: flower, error } = await supabase
-      .from('flower')
-      .select("*")
-      .eq('id', `${id}`)
-      .single();
-if(error){
-    console.log(error);
-}
-return flower;
+return singleProduct;
 }
 
 // auth

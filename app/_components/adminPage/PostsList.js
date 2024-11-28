@@ -11,7 +11,7 @@ const PostsList = async () => {
     const fruitPosts=await getFruits();
     const flowerPosts=await getFlowers();
 
-    const wholeOfPosts=[...balloonPosts,...fruitPosts,...flowerPosts];
+    const wholePosts=[...balloonPosts,...fruitPosts,...flowerPosts];
 
     
     return (
@@ -27,7 +27,7 @@ const PostsList = async () => {
             {<Suspense fallback={<Loader/>} >
             <main >
                 {
-                wholeOfPosts.map((i)=>
+                wholePosts.map((i)=>
                     <Post 
                         key={i.id}
                         id={i.id}

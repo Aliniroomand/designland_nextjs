@@ -5,11 +5,13 @@ import BG from "@/src/assets/images/Root/MainPlainBG_lg.jpg"
 import Banner from './_components/mainPage/Banner';
 import MainPageItems from './_components/mainPage/MainPageItems';
 import ContactUs from './_components/mainPage/ContactUs';
+import ReactQueryProvider from './_lib/reactQuery_functions';
+
 
 export default async function Home() {
-  return(
-    <>
 
+  return(
+    
     <main  className='relative flex flex-col justify-between items-center hide-scrollbar '>
         {/* Background */}
         <Image
@@ -29,7 +31,6 @@ export default async function Home() {
 
     </main>
     
-</>
 
 )
 }
