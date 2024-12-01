@@ -8,10 +8,10 @@ const Filter_for_balloons = () => {
     const pathname=usePathname()
 
     const filterHandler=(filter)=>{
-        const params=new URLSearchParams(searchParams)
+        const params=new URLSearchParams(searchParams);
         params.set("category",filter);
         router.replace(`${pathname}?${params.toString()}`,{scroll:false})
-        }
+    }
 
     const activedFilter=searchParams.get("category")??"all";
 

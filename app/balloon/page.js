@@ -13,11 +13,12 @@ import { getAllPosts } from "../_lib/data_services";
 
 
 export default async function BalloonDesignPage ({searchParams}){
+const  search=  await searchParams;
+const filter=search.category || "all" ;
 
-const filter=searchParams?.category ===undefined ? "all": searchParams.category  ;
     return (
         <main className=" relative w-svw h-svh overflow-hidden">
-            <Image src={BG} quality={50} placeholder="blur" className=" blur-[3px] object-cover h-screen fixed z-[-1] top-0 right-0" alt="bg of balloons"/>
+            <Image src={BG} quality={50} placeholder="blur" priority  className=" blur-[3px] object-cover h-screen fixed z-[-1] top-0 right-0" alt="bg of balloons"/>
         <Filter_for_balloons/>
         <Suspense fallback={<Loader/>} >
             <BalloonList filter={filter} />
