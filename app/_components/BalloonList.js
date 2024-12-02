@@ -3,14 +3,16 @@ import { getAllPosts, getBalloons } from "../_lib/data_services"
 import BalloonCard from "../_components/BalloonCard";
 import { useQuery} from "@tanstack/react-query";
 import { supabase } from "../_lib/supabase";
-import { WholePostsQuery } from "../_lib/reactQuery_functions";
+import { WholeCategoriesQuery, WholePostsQuery, WholeProduct_categories } from "../_lib/reactQuery_functions";
 import Loader from "../loading";
 
 
 export default function BallonList({filter}){
-const {data,error,isPending}=WholePostsQuery();
-// console.log(filter);
-console.log(data,"aaaaaaa",error,isPending);
+// const {data:wholePosts,error,isPending}=WholePostsQuery();
+const {data:wholeCategories,error,isPending}=WholeProduct_categories();
+// const wholeBalloonsPosts=wholePosts?.filter(i=>i.)
+console.log(wholeCategories);
+// console.log(data,"aaaaaaa",error,isPending);
     // const filteredBalloons=data?.filter((i)=>i.category.split(" ").includes(filter));
 // if(data)console.log(filteredBalloons)
 return(

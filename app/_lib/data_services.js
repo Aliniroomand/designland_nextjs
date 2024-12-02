@@ -11,7 +11,7 @@ export async function getAllPosts(){
             
 if(error){
     console.log(error);
-    throw new Error("Balloons couldn't be loaded")
+    throw new Error("posts couldn't be loaded")
 }
 return data;
 }
@@ -28,6 +28,30 @@ if(error){
 return singleProduct;
 }
 
+
+export async function getAllCategories(){
+
+    let { data, error } = await supabase
+    .from('categories')
+    .select('*')
+            
+            
+if(error){
+    console.log(error);
+    throw new Error("Categories couldn't be loaded")
+}
+return data;
+}
+export async function getProduct_categories(){
+    let { data, error } = await supabase
+    .from('product_categories')
+    .select('*')
+if(error){
+    console.log(error);
+    throw new Error("Categories couldn't be loaded")
+}
+return data;
+}
 // auth
 
 export async function loginUser(email,password){
